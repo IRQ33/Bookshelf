@@ -3,10 +3,10 @@ package org.example;
 import java.util.*;
 
 public class Bookshelf {
-    ArrayList<Book> bookshelf = new ArrayList<Book>();
+    ArrayList<Book> bookshelf = new ArrayList<>();
     void AddBook()
     {
-        Scanner scanner = new Scanner(System.in);
+        var scanner = new Scanner(System.in);
         System.out.println("Opcje dodawania ksiązki");
         System.out.println("Podaj tytuł ksiązki");
         String name = scanner.nextLine();
@@ -17,14 +17,12 @@ public class Bookshelf {
 
     void PrintEveryBooks()
     {
-        for (Book book: bookshelf) {
-            book.PrintBookInfo();
-        }
+        bookshelf.forEach(System.out::println);
     }
 
     void DeleteBook()
     {
-        Scanner scanner = new Scanner(System.in);
+        var scanner = new Scanner(System.in);
         System.out.println("Napisz numer książki do usunięcia ");
         Integer number = Integer.parseInt(scanner.nextLine());
         bookshelf.remove(number);

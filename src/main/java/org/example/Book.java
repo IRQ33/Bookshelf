@@ -21,12 +21,15 @@ public class Book {
         return cost;
     }
 
+
     public void setCost(int cost) {
         this.cost = cost;
     }
 
-    public void PrintBookInfo()
-    {
-        System.out.println("Tytuł: "+getTitle()+ " Cena: "+ getCost() );
+
+    @Override
+    public String toString() {
+        return "Tytuł: "+getTitle()+ " Cena: "+ getCost();
     }
+
 }
